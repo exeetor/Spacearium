@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Movement))]
 public class PlayerScript : MonoBehaviour {
 
     public float Speed;
-    private Vector3 targetPosition;
+    private Vector2 targetPosition;
 	// Use this for initialization
 	void Start ()
     {
@@ -15,7 +16,7 @@ public class PlayerScript : MonoBehaviour {
     void Update ()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 5f;
+        mousePos.z = 0f;
         Vector3 mousePosMove = mousePos;
         
 
@@ -32,13 +33,22 @@ public class PlayerScript : MonoBehaviour {
             if (Speed < 15)
             {
                 Speed = Speed + 3f;
-            }            
+            }
             targetPosition = Camera.main.ScreenToWorldPoint(mousePos);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            Speed = Speed - 2f;
+            if (Speed > -15)
+            {
+                Speed = Speed - 2f;
+            }
             targetPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        }
+        else if (Speed > 0f)
+        {
+            Speed = Speed - 0.5f;
+            if (Speed < 0)
+                Speed = 0;
         }
 
         
@@ -48,4 +58,6 @@ public class PlayerScript : MonoBehaviour {
         //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         //GetComponent<Transform>().position += move * speed * Time.deltaTime;
     }
+
+    
 }
