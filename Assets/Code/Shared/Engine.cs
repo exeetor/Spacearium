@@ -15,6 +15,9 @@ public class Engine : MonoBehaviour
     private float MaxThrust;
     [SerializeField]
     private float acceleration;
+    [SerializeField]
+    private float hullPoint;
+
 
     #region Properties
 
@@ -57,6 +60,19 @@ public class Engine : MonoBehaviour
         get
         {
             return acceleration;
+        }
+    }
+
+    public float HullPoint
+    {
+        get
+        {
+            return hullPoint;
+        }
+
+        set
+        {
+            hullPoint = value;
         }
     }
 

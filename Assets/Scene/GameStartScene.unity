@@ -252,6 +252,7 @@ MonoBehaviour:
   toggle: 0
   MaxThrust: 0
   acceleration: 0
+  hullPoint: 0
 --- !u!1 &1277509421
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +415,7 @@ MonoBehaviour:
   toggle: 0
   MaxThrust: 0
   acceleration: 0
+  hullPoint: 0
 --- !u!1 &1381530096
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +490,7 @@ MonoBehaviour:
   toggle: 0
   MaxThrust: 0
   acceleration: 0
+  hullPoint: 0
 --- !u!1 &1663665237
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,3 +594,4 @@ MonoBehaviour:
   toggle: 0
   MaxThrust: 0
   acceleration: 0
+  hullPoint: 0
