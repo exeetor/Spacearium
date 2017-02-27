@@ -78,6 +78,11 @@ public class Engine : MonoBehaviour
 
     #endregion
 
+    void Start()
+    {
+        GetComponentInParent<Rigidbody2D>().mass += mass;
+    }
+
     private void Update()
     {
         if (Toggle)

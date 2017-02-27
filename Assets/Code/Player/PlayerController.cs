@@ -6,10 +6,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     private Movement movement;
+    private Combat combat;
 	
 	void Start ()
     {
         movement = GetComponent<Movement>();
+        combat = GetComponent<Combat>();
 	}
 	
 	void Update ()
@@ -26,5 +28,8 @@ public class PlayerController : MonoBehaviour {
         movement.BackThrustToggle = Input.GetKey(KeyCode.S);
         movement.RightThrustToggle = Input.GetKey(KeyCode.D);
         movement.LeftThrustToggle = Input.GetKey(KeyCode.A);
+
+        combat.ToggleMainWeapon = Input.GetMouseButton(0);
+        
     }
 }

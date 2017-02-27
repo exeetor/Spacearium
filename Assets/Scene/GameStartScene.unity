@@ -178,6 +178,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &223314903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 223314904}
+  - component: {fileID: 223314905}
+  m_Layer: 0
+  m_Name: FrontMachineGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223314904
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223314903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2032402864}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223314905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223314903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c201d23badd6f41a56210d86b01578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1221754621024606, guid: 32ac7bfb6e5e9c84ead10142080582d5,
+    type: 2}
+  rateOfFire: 0.1
+  mass: 1
 --- !u!1 &404665645
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0
-  thrust: 1
+  thrust: 5
   toggle: 0
   MaxThrust: 0
   acceleration: 0
@@ -264,6 +308,7 @@ GameObject:
   - component: {fileID: 1277509424}
   - component: {fileID: 1277509427}
   - component: {fileID: 1277509426}
+  - component: {fileID: 1277509423}
   - component: {fileID: 1277509422}
   m_Layer: 0
   m_Name: PlayerShip
@@ -292,6 +337,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1277509423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277509421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d684673bb0d26e45873d9d2c7446fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 223314905}
 --- !u!212 &1277509424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -341,6 +398,7 @@ Transform:
   - {fileID: 1381530097}
   - {fileID: 2042139264}
   - {fileID: 1663665238}
+  - {fileID: 2032402864}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -411,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0
-  thrust: 1
+  thrust: 5
   toggle: 0
   MaxThrust: 0
   acceleration: 0
@@ -520,6 +578,35 @@ Transform:
   m_Father: {fileID: 1277509425}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &2032402863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2032402864}
+  m_Layer: 0
+  m_Name: WeaponHullpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032402864
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032402863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 223314904}
+  m_Father: {fileID: 1277509425}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042139263
 GameObject:
   m_ObjectHideFlags: 0
