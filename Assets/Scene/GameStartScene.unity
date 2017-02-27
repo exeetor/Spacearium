@@ -294,8 +294,6 @@ MonoBehaviour:
   mass: 0
   thrust: 5
   toggle: 0
-  MaxThrust: 0
-  acceleration: 0
   hullPoint: 0
 --- !u!1 &1277509421
 GameObject:
@@ -471,8 +469,6 @@ MonoBehaviour:
   mass: 0
   thrust: 5
   toggle: 0
-  MaxThrust: 0
-  acceleration: 0
   hullPoint: 0
 --- !u!1 &1381530096
 GameObject:
@@ -546,8 +542,6 @@ MonoBehaviour:
   mass: 0
   thrust: 10
   toggle: 0
-  MaxThrust: 0
-  acceleration: 0
   hullPoint: 0
 --- !u!1 &1663665237
 GameObject:
@@ -679,6 +673,4 @@ MonoBehaviour:
   mass: 1
   thrust: 10
   toggle: 0
-  MaxThrust: 0
-  acceleration: 0
   hullPoint: 0
