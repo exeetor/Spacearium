@@ -61,6 +61,9 @@ class Bullet : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GetComponentInParent<Collider2D>());
+        body.velocity = transform.right * speed;
+        Destroy(gameObject, TimeToLive);
     }
 
     private void Awake()
@@ -70,8 +73,8 @@ class Bullet : MonoBehaviour
 
     void FixedUpdate()
     {
-        body.velocity = transform.right * speed;
-        Destroy(gameObject, TimeToLive);
+        
+        
     }
 }
 
