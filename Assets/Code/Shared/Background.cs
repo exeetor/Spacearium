@@ -6,7 +6,7 @@ public class Background : MonoBehaviour {
 
     Material mat;
     [Range(1,200)]
-    public float parallax = 1;
+    public float parallax = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,6 @@ public class Background : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        mat.mainTextureOffset = transform.position / 40f;
+        mat.mainTextureOffset = transform.position / parallax;
     }
 }
