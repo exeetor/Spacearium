@@ -77,7 +77,9 @@ class Turret : MonoBehaviour
         firetime = firetime - Time.deltaTime;
         if (firetime < 0 && Toggle)
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            GameObject go = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            go.GetComponent<Rigidbody2D>().velocity = GetComponentInParent<Rigidbody2D>().velocity;
+            Physics2D.IgnoreCollision(go.GetComponent<Collider2D>(), GetComponentInParent<Collider2D>());
             firetime = RateOfFire;
         }
     }

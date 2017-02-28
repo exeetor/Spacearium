@@ -61,8 +61,7 @@ class Bullet : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), GetComponentInParent<Collider2D>());
-        body.velocity = transform.right * speed;
+        body.velocity += (Vector2)transform.right * speed;
         Destroy(gameObject, TimeToLive);
     }
 
