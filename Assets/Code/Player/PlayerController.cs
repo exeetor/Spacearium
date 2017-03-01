@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
         mousePosMove.y = mousePosMove.y - objectPos.y;
 
         movement.TargetDirection = mousePosMove;
-
+        
         movement.ForwardThrustToggle = Input.GetKey(KeyCode.W);
         movement.BackThrustToggle = Input.GetKey(KeyCode.S);
         movement.RightThrustToggle = Input.GetKey(KeyCode.D);

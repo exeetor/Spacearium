@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     private bool backThrustToggle = false;
     private bool leftThrustToggle = false;
     private bool rightThrustToggle = false;
+    private float rotationSpeed = 250.0f;
     [SerializeField]
     private Engine frontEngine;
     [SerializeField]
@@ -136,7 +137,7 @@ public class Movement : MonoBehaviour
 
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
 
-        body.MoveRotation(Mathf.MoveTowardsAngle(body.rotation, angle, Time.deltaTime * 250));
+        body.MoveRotation(Mathf.MoveTowardsAngle(body.rotation, angle, Time.deltaTime * rotationSpeed));
 
         //calculate force
         FrontEngine.Toggle = BackThrustToggle;
