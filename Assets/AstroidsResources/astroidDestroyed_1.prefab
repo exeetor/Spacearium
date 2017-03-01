@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hP: 1
-  astroidSprites: []
-  destroyedAstroidSprite: []
+  minRotate: 20
+  maxRotate: 20
 --- !u!212 &212005191413312684
 SpriteRenderer:
   m_ObjectHideFlags: 1
