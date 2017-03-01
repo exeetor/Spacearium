@@ -5,6 +5,7 @@ using UnityEngine;
 class Turret : MonoBehaviour
 {
     public GameObject bulletPrefab;
+	public AudioClip sound = null;
     [SerializeField]
     private float rateOfFire;
     [SerializeField]
@@ -12,6 +13,7 @@ class Turret : MonoBehaviour
 
     private bool toggle;
     private float firetime;
+	private AudioSource source;
 
     #region Properties
     public float RateOfFire
@@ -64,7 +66,7 @@ class Turret : MonoBehaviour
 
     private void Awake()
     {
-
+		source = GetComponent<AudioSource> ();
     }
 
     void Update()
@@ -81,6 +83,8 @@ class Turret : MonoBehaviour
             go.GetComponent<Rigidbody2D>().velocity = GetComponentInParent<Rigidbody2D>().velocity;
             Physics2D.IgnoreCollision(go.GetComponent<Collider2D>(), GetComponentInParent<Collider2D>());
             firetime = RateOfFire;
+
+			source.PlayOneShot (sound, 1.0f);
         }
     }
 }
