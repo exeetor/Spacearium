@@ -120,6 +120,19 @@ public class Movement : MonoBehaviour
         }
     }
 
+    public float RotationSpeed
+    {
+        get
+        {
+            return rotationSpeed;
+        }
+
+        set
+        {
+            rotationSpeed = value;
+        }
+    }
+
     #endregion
 
     void Start ()
@@ -137,7 +150,7 @@ public class Movement : MonoBehaviour
 
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
 
-        body.MoveRotation(Mathf.MoveTowardsAngle(body.rotation, angle, Time.deltaTime * rotationSpeed));
+        body.MoveRotation(Mathf.MoveTowardsAngle(body.rotation, angle, Time.deltaTime * RotationSpeed));
 
         //calculate force
         FrontEngine.Toggle = BackThrustToggle;
