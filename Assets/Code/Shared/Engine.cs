@@ -76,9 +76,6 @@ public class Engine : MonoBehaviour
         if (Toggle)
         {
             GetComponentInParent<Rigidbody2D>().AddForce(-transform.right * Thrust);
-            GetComponentInParent<Rigidbody2D>().drag = 0;
         }
-        else
-            GetComponentInParent<Rigidbody2D>().drag = 0.5f;
     }
 }

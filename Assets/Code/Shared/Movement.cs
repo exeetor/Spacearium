@@ -152,7 +152,11 @@ public class Movement : MonoBehaviour
 
         body.MoveRotation(Mathf.MoveTowardsAngle(body.rotation, angle, Time.deltaTime * RotationSpeed));
 
-        //calculate force
+        if (BackThrustToggle || ForwardThrustToggle || RightThrustToggle || LeftThrustToggle)
+            body.drag = 0.0f;
+        else
+            body.drag = 0.5f;
+
         FrontEngine.Toggle = BackThrustToggle;
         BackEngine.Toggle = ForwardThrustToggle;
         RightEngine.Toggle = RightThrustToggle;

@@ -452,7 +452,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1385792726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -0.019, y: 0.004, z: 10}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 189030062}
@@ -508,6 +508,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30886cca64dc915419a7681816e16317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hP: 3
+  astroidSprites:
+  - {fileID: 21300000, guid: 8c074311d97080d428d833600caef5f9, type: 3}
+  - {fileID: 21300002, guid: 8c074311d97080d428d833600caef5f9, type: 3}
+  - {fileID: 21300004, guid: 8c074311d97080d428d833600caef5f9, type: 3}
+  - {fileID: 21300006, guid: 8c074311d97080d428d833600caef5f9, type: 3}
+  destroyedAstroidPrefab0: {fileID: 1589862008880490, guid: acbfd3682d105c24d800d7193fa27cb8,
+    type: 2}
+  destroyedAstroidPrefab1: {fileID: 1754894280475586, guid: 35c66c6b35fe4e945ad82a614eb2ca9b,
+    type: 2}
+  destroyedAstroidPrefab2: {fileID: 1524536818046084, guid: 97a3c0e18a5f36742a355adc8b30749b,
+    type: 2}
+  destroyedAstroidPrefab3: {fileID: 1107173575688440, guid: 93107e0e292e7e64e8e912169da0445a,
+    type: 2}
 --- !u!212 &1781418845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -539,7 +553,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: af7352ba80ad0ff4eba29df95c179875, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c074311d97080d428d833600caef5f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -550,7 +564,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781418842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.027, y: 0.913, z: 0}
+  m_LocalPosition: {x: 5.08, y: 0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
