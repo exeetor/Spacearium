@@ -7,9 +7,9 @@ public class DestroyedAstroid : MonoBehaviour
     [SerializeField]
     private int hP = 1;
     [SerializeField]
-    private float minRotate = 20.0f;
+    private float minRotate = 5.0f;
     [SerializeField]
-    private float maxRotate = 20.0f;
+    private float maxRotate = 10.0f;
 
 
     private Rigidbody2D body;
@@ -39,11 +39,11 @@ public class DestroyedAstroid : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        //HP -= 1;
-        //if (HP == 0)
-        //{
-        //    Destroy(gameObject);
-        //}
+        HP -= 1;
+        if (HP == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()

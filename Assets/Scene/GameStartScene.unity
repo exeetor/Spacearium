@@ -516,12 +516,13 @@ MonoBehaviour:
   - {fileID: 21300006, guid: 8c074311d97080d428d833600caef5f9, type: 3}
   destroyedAstroidPrefab0: {fileID: 1589862008880490, guid: acbfd3682d105c24d800d7193fa27cb8,
     type: 2}
-  destroyedAstroidPrefab1: {fileID: 1754894280475586, guid: 35c66c6b35fe4e945ad82a614eb2ca9b,
+  destroyedAstroidPrefab1: {fileID: 1524536818046084, guid: 97a3c0e18a5f36742a355adc8b30749b,
     type: 2}
-  destroyedAstroidPrefab2: {fileID: 1524536818046084, guid: 97a3c0e18a5f36742a355adc8b30749b,
+  destroyedAstroidPrefab2: {fileID: 1754894280475586, guid: 35c66c6b35fe4e945ad82a614eb2ca9b,
     type: 2}
   destroyedAstroidPrefab3: {fileID: 1107173575688440, guid: 93107e0e292e7e64e8e912169da0445a,
     type: 2}
+  spawnPrefab: []
 --- !u!212 &1781418845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -564,7 +565,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781418842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.08, y: 0.92, z: 0}
+  m_LocalPosition: {x: 5.05, y: 1.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

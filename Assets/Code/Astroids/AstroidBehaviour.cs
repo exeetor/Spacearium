@@ -1,6 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[Serializable]
+public struct SpawnInformation
+{
+    public GameObject preFab;
+    public float chance;
+}
 
 public class AstroidBehaviour : MonoBehaviour 
 {
@@ -19,6 +27,8 @@ public class AstroidBehaviour : MonoBehaviour
     private GameObject destroyedAstroidPrefab2;
     [SerializeField]
     private GameObject destroyedAstroidPrefab3;
+    [SerializeField]
+    private SpawnInformation[] spawnPrefab;
 
     #region Properties
 
@@ -52,10 +62,15 @@ public class AstroidBehaviour : MonoBehaviour
         if (HP == 0)
         {
             Destroy(gameObject);
-            Instantiate(destroyedAstroidPrefab0, transform.position, transform.rotation);
-            Instantiate(destroyedAstroidPrefab1, transform.position, transform.rotation);
-            Instantiate(destroyedAstroidPrefab2, transform.position, transform.rotation);
-            Instantiate(destroyedAstroidPrefab3, transform.position, transform.rotation);
+            GameObject destAstroid0 = Instantiate(destroyedAstroidPrefab0, new Vector3(transform.position.x - 0.6f, transform.position.y + 0.6f), Quaternion.identity);
+            GameObject destAstroid1 = Instantiate(destroyedAstroidPrefab1, new Vector3(transform.position.x + 0.6f, transform.position.y + 0.6f), Quaternion.identity);
+            GameObject destAstroid2 = Instantiate(destroyedAstroidPrefab2, new Vector3(transform.position.x - 0.6f, transform.position.y - 0.6f), Quaternion.identity);
+            GameObject destAstroid3 = Instantiate(destroyedAstroidPrefab3, new Vector3(transform.position.x + 0.6f, transform.position.y - 0.6f), Quaternion.identity);
+            destAstroid0.GetComponent<Rigidbody2D>().velocity = new Vector2(-0.3f, 0.3f) * 5.0f;
+            destAstroid1.GetComponent<Rigidbody2D>().velocity = new Vector2( 0.3f, 0.3f) * 5.0f;
+            destAstroid2.GetComponent<Rigidbody2D>().velocity = new Vector2(-0.3f, -0.3f) * 5.0f;
+            destAstroid3.GetComponent<Rigidbody2D>().velocity = new Vector2( 0.3f, -0.3f) * 5.0f;
+
         }
     }
 
